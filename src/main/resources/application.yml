@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=batch
+    username: postgres
+    password: admin123
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: batch
+    hibernate:
+      ddl-auto: none
+    open-in-view:
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
+    default-schema: batch
+    liquibase-schema: batch
+    enabled: true
+  batch:
+    job:
+      enabled: false
