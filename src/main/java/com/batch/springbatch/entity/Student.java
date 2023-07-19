@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "students")
@@ -32,5 +33,5 @@ public class Student {
     private String phoneNumber;
 
     @Column(name = "create_date")
-    private String createDate;
+    private Date createDate;
 }
